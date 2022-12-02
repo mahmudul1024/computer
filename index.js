@@ -18,10 +18,16 @@ app.use(express.json());
 
 async function run() {
   try {
-    const usersCollection = client.db("furniture-db").collection("users");
-    const productsCollection = client.db("furniture-db").collection("products");
-    const bookingCollection = client.db("furniture-db").collection("bookings");
-    const categoryCollection = client.db("furniture-db").collection("category");
+    const usersCollection = client.db("laptopresale-db").collection("users");
+    const productsCollection = client
+      .db("laptopresale-dbb")
+      .collection("products");
+    const bookingCollection = client
+      .db("laptopresale-db")
+      .collection("bookings");
+    const categoryCollection = client
+      .db("laptopresale-db")
+      .collection("category");
 
     app.post("/users", async (req, res) => {
       const result = await usersCollection.insertOne(req.body);
