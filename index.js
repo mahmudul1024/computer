@@ -20,7 +20,7 @@ async function run() {
   try {
     const usersCollection = client.db("laptopresale-db").collection("users");
     const productsCollection = client
-      .db("laptopresale-dbb")
+      .db("laptopresale-db")
       .collection("products");
     const bookingCollection = client
       .db("laptopresale-db")
